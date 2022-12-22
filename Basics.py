@@ -29,8 +29,8 @@ available = True
 out_of_stock = not available
 print(not available) #False
 print(out_of_stock)
-
 print(f"****************************************************\n")
+
 print("-Operators used for comparison")
 print(10==10) #equality operator
 print(10!=10) #inequality operator
@@ -40,8 +40,8 @@ print(10>=10) #greater than or equal operator
 print(10>10) #greater operator
 print("apple"=="apple") 
 print("subscribed"!="unsubscribed")
-
 print(f"****************************************************\n")
+
 print("-Variable Types")
 sugar_content="High" #String
 print(sugar_content)
@@ -56,6 +56,9 @@ is_on = True #Boolean
 print(is_on)
 print(f"****************************************************\n")
 
-
-
-
+print("-Formatted Strings")
+#Allow us to display expressions like adding a string to a number, wihtout any error
+print(f"{2} new messages")
+messages_unread = 4
+print(f"{messages_unread} new messages")
+print(f"****************************************************\n")
