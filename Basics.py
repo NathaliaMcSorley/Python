@@ -61,4 +61,22 @@ print("-Formatted Strings")
 print(f"{2} new messages")
 messages_unread = 4
 print(f"{messages_unread} new messages")
+field = "nano"+"tech"
+print(field + " trading")
+tries = 4
+current_try = 1
+print(f"{tries - current_try} tries left")
+print(f"****************************************************\n")
+
+#Compare jeans_sold with target to see if the retailer hit their sales target. Then we will check if there are eans still in stock.
+stock = 600
+target = 500
+jeans_sold = 400
+
+target_hit = jeans_sold == target
+print(f"Was target hit? {target_hit}")
+
+current_stock = stock - jeans_sold
+in_stock = current_stock != 0 
+print(f"In stock? {in_stock}")
 print(f"****************************************************\n")
