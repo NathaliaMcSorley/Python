@@ -79,4 +79,17 @@ print(f"Was target hit? {target_hit}")
 current_stock = stock - jeans_sold
 in_stock = current_stock != 0 
 print(f"In stock? {in_stock}")
+
+#Program that updates how many cars we have rented and how many are available for rent 
+total = 100
+rented_cars = 40
+available = total - rented_cars
+print(f"{available} available cars")
+rented_cars += 3 
+available = total - rented_cars
+print(f"{available} available cars")
+
+languages = "Python"
+languages += " SQL"
+print(languages)
 print(f"****************************************************\n")
