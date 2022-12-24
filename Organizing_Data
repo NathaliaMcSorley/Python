@@ -34,6 +34,34 @@ vocabulary.sort()
 print(f"{vocabulary}")
 print(f"****************************************************\n")
 
+print("-String Manipulation")
+full_name = "John Lee"
+name = full_name.split() #default way to split is the whitespace
+print(name)
+name_update = full_name.replace("Lee", "Robert") #replace some part of the string 
+print(name_update)
+
+signups = "44-22-44-11"
+signups_list = signups.split("-") #here we use - as the way we want it to split the string 
+print(signups_list)
+print(f"****************************************************\n")
+
+print("-Casting")
+#Python will convert the integer to a float automatically
+bill = 21.4
+tip = "3.5"
+total = bill + float(tip) #float casting
+print("The total is " + str(total)) #string casting 
+
+bill = int(12.9) #int casting never rounds it just consider the integer 
+print(bill)
+
+user_1 = [1, "Sara"]
+user_2 = [2, "Andy"]
+data = dict([user_1, user_2]) #dict() can be used with a list of the lists 
+print(data)
+print(f"****************************************************\n")
+
 humidity_level = [87, 74, 82, 48]
 humidity_level.insert(0, 90)
 humidity_level.pop()
@@ -99,3 +127,21 @@ amounts = [five_star, one_star]
 print(f"\nList of ratings: {ratings}")
 print(f"Amount of five start {amounts[0]}")
 print(f"Amount of one start {amounts[1]}")
+
+#A club has a membership sign-up form where the data arrives as strings. Let's change types to fix it. 
+name_box = "Alice Bentall"
+age_box = "20"
+uni_box = ""
+subs_box = "1.99"
+mkt_box = "0"
+name_entered = bool(name_box)
+if name_entered:
+    name = name_box
+else:
+    name = "Unknown"
+age = int(age_box)
+student = bool(uni_box)
+subscription = float(subs_box)
+marketing = bool(int(mkt_box))
+profile = name + ", "+ str(age) + ", subscription:" + str(subscription)
+print(profile)
