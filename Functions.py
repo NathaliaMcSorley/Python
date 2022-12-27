@@ -93,3 +93,118 @@ shipping = 10
 def calculate_total(cart):
     print(f"Total amount: {cart + shipping}")
 calculate_total(54)
+
+print(f"****************************************************\n")
+
+print("-Conditionals and functions")
+def add_shipping(cart):
+    if cart < 100:
+        print(f"Total: {cart + 10}")
+    else:
+        print(f"Total: {cart}")
+add_shipping(54)
+add_shipping(189)
+
+def calculate(operator, x, y):
+  if operator == "+":
+    print(x + y)
+  else:
+    print(f"unknown: {operator}")
+calculate("-", 30, 10)
+
+print(f"****************************************************\n")
+
+print("-Functions with lists")
+def display_programme(movies):
+    print(f"Airing tonight: {movies}")
+    print(f"Total movies: {len(movies)}")
+movie_list = ["Alien", "Moon"]
+display_programme(movie_list)
+
+def get_winner(top_players):
+  winner = top_players[0]
+  print(f"Game winner: {winner}")
+top_players = ["Jay", "Meg", "Cy"]
+get_winner(top_players)
+
+def update_first_place(leaderboard, player):
+    leaderboard[0] = player
+    return leaderboard
+leaderboard = ["Jay", "Meg", "Cy"]
+leaderboard = update_first_place(leaderboard, "Lena")
+print(leaderboard)
+
+def set_initials(names, initial):
+  names[0] = initial
+  return(names)
+author_names = ["Francis", "Scott", "Fitzgerald"]
+author_names = set_initials(author_names, "F.")
+print(author_names)
+
+print(f"****************************************************\n")
+
+print("-Functions with loops")
+#Functions help us reuse loops by allowing us to chane the number of repetitions or the list we are iterating through
+def onboard_passengers(bookings):
+    counter = 1
+    while counter <= bookings:
+        print(f"Passenger {counter} on board")
+        counter += 1
+onboard_passengers(4)
+
+def display_progress(total_files):
+    for i in range (total_files):
+        print(f"Downloading file {i+1} out of {total_files}")
+display_progress(3)
+
+#loop that iterates through a list
+def halve_prices(cart):
+    for price in cart:
+        print(f"New price: {price/2}")
+cart_list=[5, 20, 80]
+halve_prices(cart_list)
+
+def show_next_track():
+    playlist = ["Hey Jude", "Helter Skelter", "Something"]
+    for track in playlist:
+        print(f"Next up: {track}")
+show_next_track()
+
+print(f"****************************************************\n")
+
+print("-Morse Code")
+def convert_to_morse(code):
+    code = code.replace("1", ".----")
+    code = code.replace("2", "..---")
+    code = code.replace("3", "...--")
+    code = code.replace("4", "....-")
+    code = code.replace("5", ".....")
+    code = code.replace("6", "-....")
+    code = code.replace("7", "--...")
+    code = code.replace("8", "---..")
+    code = code.replace("9", "----.")
+    code = code.replace("6", "-----")
+    return code
+lock_code = "1 2 2 5 0"
+print(f"Initial code: {lock_code}")
+morse = convert_to_morse(lock_code)
+print(f"Morse code: {morse}")
+
+print(f"****************************************************\n")
+
+print("-Calculator")
+def calculator(num1, num2, op):
+    result = 0
+    if op == "+":
+        result = num1 + num2
+    elif op == "-":
+        result = num1 - num2
+    elif op == "*":
+        result = num1 * num2
+    elif op == "/":
+        result = num1 / num2
+    else:
+        print(f"Unknown: {op}")
+    operation = f"{num1} {op} {num2} = {result}"
+    return operation
+print(calculator(2,3,"+"))        
