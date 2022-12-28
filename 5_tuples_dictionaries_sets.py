@@ -14,7 +14,6 @@ print(vertigo_data[1]) #accessing second data in the tuple
 
 for movie in movie_tuples:
     print(f"Movies: {movie}")
-print(f"\n")
 
 #The main difference of lists and tuples is that unlike lists, we can't update, add, or delete values from tuples. Tuples are immutable.
 #We use tuples to store information that shouldn't be modified, like a person's name and birth date
@@ -25,7 +24,7 @@ def get_scores_data(scores_list):
     return highest_score, lowest_score
 scores = [31, 45,89,56]
 data = get_scores_data(scores)
-print(data)
+print(f"{data}\n")
 highest = data[0]
 smallest = data[1]
 print(f"Smallest score: {smallest}")
@@ -41,7 +40,7 @@ def form_team(players):
 players = ["Sue", "Ed", "Ann", "Ty"]
 team = form_team(players)
 team [0] = "Chloe"
-print(team)
+print(f"{team}\n")
 
 def analyze_profit(gains, expenses):
   profit = gains - expenses
@@ -100,3 +99,50 @@ print(f"\n{members_count}\n")
 print(f"****************************************************\n")
 
 print("-Sets")
+#when we want to make sure that a collection of values can't have any duplicates, we store it in a set, like these postcodes here. 
+postcodes = {"SW1A", "SY3", "B44"}
+print(postcodes)
+postcodes.add("SA89") #add element to the set
+print(postcodes)
+postcodes.add("SA89") #nothing happens when we use add() with an already existing value
+print(postcodes)
+postcodes.remove("SA89") #Delete element 
+print(f"{postcodes}\n")
+
+#to avoid getting an error, first check if an element is in a set before removing it
+classes = {"Geometry", "Music", "French"}
+if "History" in classes:
+    classes.remove("History")
+print(f"{classes}\n")
+
+#sets are unordered, meaning that set elements don't have indices
+#we can only check if a set contains an element like "no" with the in keyword
+answer_options = {"yes", "no"}
+print("no" in answer_options)
+#we can also use a for loop to iterate through set elements and access them one by one
+for answer in answer_options:
+    print(f"Option: {answer}")
+print(f"****************************************************\n")
+
+print("-Sets and Lists")
+#Lists allow duplicates, to eliminate duplicates from a list, we can transform it into a set 
+grocery_list = ["broccoli", "cereal", "milk", "broccoli"]
+print(set(grocery_list))
+grocery_set = set(grocery_list)
+
+print(f"****************************************************\n")
+
+print("-Set Operations")
+friends = {"Emma", "Jen", "Rob", "Ed"}
+chat = {"Jen", "Ed", "Sue"} #subset of the friends set
+print(f"Length of friends set: {len(friends)}") #length of the set
+print(f"Is chat a subset of friends? {chat.issubset(friends)}") #check if chat is a subset of friends
+#union gives us a new set without duplicates
+#create a set of elements that are present in both sets
+#elements that are in classmates but are NOT in friends
+union = friends.union(chat)
+intersection = friends.intersection(chat)
+difference = friends.difference(chat)
+print(f"Union: {union}")
+print(f"Intersection: {intersection}")
+print(f"Difference: {difference}")
