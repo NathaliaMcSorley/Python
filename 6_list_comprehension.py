@@ -110,3 +110,13 @@ print(alphabet[1:6:2])
 #2 means that we will return every second value 
 #we can use step value with no star or end value
 print(alphabet[::2])
+print(f"****************************************************\n")
+
+print("Hobbies prioritizer")
+hobbies = ["Archery", "Bowling", "Canoeing", "Dance", "Embrooidery", "Flute", "Gymnastics"]
+while hobbies[-1] != "Dance":
+  del hobbies[-1]
+
+number = str(len(hobbies))
+print("These are your " + number + " favorite hobbies: ")
+print(hobbies)
